@@ -1,0 +1,162 @@
+@keyframes typed {
+	/* string #{
+		$i
+	}
+	, char #{
+		$j
+	}
+	 */
+	 0%, 1.7533859649% {
+		 content: "E";
+	}
+	 1.7543859649%, 3.5077719298% {
+		 content: "Eh";
+	}
+	 3.5087719298%, 5.2621578947% {
+		 content: "Eh ";
+	}
+	 5.2631578947%, 7.0165438596% {
+		 content: "Eh y";
+	}
+	 7.0175438596%, 8.7709298246% {
+		 content: "Eh yo";
+	}
+	 8.7719298246%, 10.5253157895% {
+		 content: "Eh you";
+	}
+	 10.5263157895%, 12.2797017544% {
+		 content: "Eh your";
+	}
+	 12.2807017544%, 14.0340877193% {
+		 content: "Eh your ";
+	}
+	 14.0350877193%, 15.7884736842% {
+		 content: "Eh your a";
+	}
+	 15.7894736842%, 17.5428596491% {
+		 content: "Eh your al";
+	}
+	 17.5438596491%, 19.297245614% {
+		 content: "Eh your alr";
+	}
+	 19.298245614%, 21.0516315789% {
+		 content: "Eh your alri";
+	}
+	 21.0526315789%, 22.8060175439% {
+		 content: "Eh your alrig";
+	}
+	 22.8070175439%, 24.5604035088% {
+		 content: "Eh your alrigh";
+	}
+	 24.5614035088%, 62.8060175439% {
+		 content: "Eh your alright";
+	}
+	 62.8070175439%, 64.2095263158% {
+		 content: "Eh your alrigh";
+	}
+	 64.2105263158%, 65.6130350877% {
+		 content: "Eh your alrig";
+	}
+	 65.6140350877%, 67.0165438596% {
+		 content: "Eh your alri";
+	}
+	 67.0175438596%, 68.4200526316% {
+		 content: "Eh your alr";
+	}
+	 68.4210526316%, 69.8235614035% {
+		 content: "Eh your al";
+	}
+	 69.8245614035%, 71.2270701754% {
+		 content: "Eh your a";
+	}
+	 71.2280701754%, 72.6305789474% {
+		 content: "Eh your ";
+	}
+	 72.6315789474%, 74.0340877193% {
+		 content: "Eh your";
+	}
+	 74.0350877193%, 75.4375964912% {
+		 content: "Eh you";
+	}
+	 75.4385964912%, 76.8411052632% {
+		 content: "Eh yo";
+	}
+	 76.8421052632%, 78.2446140351% {
+		 content: "Eh y";
+	}
+	 78.2456140351%, 79.648122807% {
+		 content: "Eh ";
+	}
+	 79.649122807%, 81.0516315789% {
+		 content: "Eh";
+	}
+	 81.0526315789%, 82.4551403509% {
+		 content: "E";
+	}
+	 82.4561403509%, 100% {
+		 content: "​";
+	}
+}
+ @keyframes beam-blink {
+	 75% {
+		 border-color: transparent;
+	}
+}
+ * {
+	 backface-visibility: hidden;
+}
+ html, body {
+	 height: 100%;
+}
+ body {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 background-color: #000;
+	 background-image: radial-gradient(rgba(255, 255, 255, 0.125), rgba(255, 255, 255, 0)), linear-gradient(to bottom, #000, #000 2px, #111 3px);
+	 background-repeat: repeat-y;
+	 background-position: center center;
+	 background-size: cover, 100% 3px;
+	 font-size: calc(10px + 2vw);
+	 font-family: 'VT323', monospace, sans-serif;
+	 color: #3f3;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+}
+ body::after {
+	 content: "​";
+	 position: relative;
+	 top: -13px;
+	 display: inline-block;
+	 padding-right: 3px;
+	 padding-right: calc(3px + 0.1vw);
+	 border-right: 10px solid rgba(51, 255, 51, 0.75);
+	 border-right: calc(1.1vw + 4px) solid rgba(51, 255, 51, 0.75);
+	 text-shadow: 0 0 5px rgba(51, 255, 51, 0.75);
+	 white-space: nowrap;
+	 animation: typed 5.7s linear 1s infinite, beam-blink 1s infinite;
+}
+ @media (max-width: 575px) {
+	 body::after {
+		 top: -33px;
+	}
+}
+ body::before {
+	 content: "1 strings / 15 chars / 5.7s duration";
+	 display: block;
+	 position: absolute;
+	 bottom: 0;
+	 width: 100%;
+	 padding: 3px 0;
+	 background: #00f;
+	 color: #fff;
+	 text-align: center;
+	 font-size: 18px;
+	 letter-spacing: 0.7px;
+	 white-space: pre-wrap;
+}
+ @media (max-width: 575px) {
+	 body::before {
+		 content: "1 strings \A 15 chars \A 5.7s duration";
+	}
+}
